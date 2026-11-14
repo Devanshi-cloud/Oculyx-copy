@@ -19,11 +19,11 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Insights",
     links: [
-      { label: "DFOS Water Injection Case Study", href: "/dfos-exdts-multi-zone-water-injection-monitoring" },
-      { label: "Agentic Network Research", href: "/agentic-ai-network-operations" },
+      { label: "DFOS Water Injection Case Study", href: "/blogs/dfos/multi-zone-water-injection-monitoring" },
+      { label: "Agentic Network Research", href: "/blogs/agentic-router-network/what-if-your-network-could-fix-itself" },
       { label: "Industries We Serve", href: "#solutions" },
       { label: "AI Trust Index™", href: "#capabilities" },
-      { label: "Network Operations Blogs", href: "/agentic-ai-network-operations" }
+      { label: "Network Operations Blogs", href: "/blogs/agentic-router-network" }
     ],
   },
   {

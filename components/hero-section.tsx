@@ -50,7 +50,7 @@ export function HeroSection({ onDemo }: { onDemo: () => void }) {
           transition={{ duration: 0.7, delay: 0.25, ease }}
           className="font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight text-foreground mb-4 select-none uppercase"
         >
-          Inference.
+          Oculyx
         </motion.h1>
 
         {/* Original-site headline */}

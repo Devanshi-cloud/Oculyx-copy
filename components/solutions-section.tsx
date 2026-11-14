@@ -147,7 +147,7 @@ export function SolutionsSection() {
             DFOS, Surveillance Intelligence, and Agentic Network Routing connect distributed signals, network activity, and real-world events into contextual intelligence and coordinated action.
           </p>
         </div>
-        <a href="/dfos-exdts-multi-zone-water-injection-monitoring" className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ea580c] hover:text-foreground">
+        <a href="/blogs/dfos/multi-zone-water-injection-monitoring" className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ea580c] hover:text-foreground">
           Read DFOS water-injection case study →
         </a>
       </motion.div>
