@@ -20,10 +20,10 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
     title: "Insights",
     links: [
       { label: "DFOS Water Injection Case Study", href: "/dfos-exdts-multi-zone-water-injection-monitoring" },
-      { label: "Research & Innovation", href: "#research" },
-      { label: "Industries We Serve", href: "#research" },
+      { label: "Agentic Network Research", href: "/agentic-ai-network-operations" },
+      { label: "Industries We Serve", href: "#solutions" },
       { label: "AI Trust Index™", href: "#capabilities" },
-      { label: "Blogs", href: "#research" },
+      { label: "Network Operations Blogs", href: "/agentic-ai-network-operations" }
     ],
   },
   {
@@ -76,10 +76,7 @@ export function Footer({ onDemo }: { onDemo: () => void }) {
       {/* Quote */}
       <div className="border-2 border-foreground px-5 py-6 lg:px-8 lg:py-8 mb-12">
         <p className="text-lg lg:text-2xl font-display font-bold tracking-tight uppercase leading-snug text-balance max-w-4xl">
-          {"“The future's greatest challenge is not the lack of data. It is the ability to determine what is true.”"}
-        </p>
-        <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-muted-foreground mt-4">
-          — OCULYX FIELD NOTES / MULTI-MODAL INFERENCE ENGINE
+          {"“If 5G is the neural conduction of the digital age and AI the super brain, fiber sensing serves as the quietly growing peripheral nerves.”"}
         </p>
       </div>
 

@@ -85,9 +85,9 @@ const STATS = [
 ]
 
 const QUESTIONS = [
-  "Is my infrastructure healthy? DFOS Intelligence identifies structural change, strain, vibration and ground movement.",
-  "What is happening in my environment? Surveillance Intelligence analyses video, audio and events for situational awareness.",
-  "Can my network respond intelligently? Agentic Router Systems identify faults, optimize routes and coordinate operational response.",
+  "Is my infrastructure healthy?",
+  "What is happening in my environment?",
+  "Can my network respond intelligently?",
 ]
 
 function StatBlock({ label, value, index }: { label: string; value: string; index: number }) {
@@ -163,10 +163,10 @@ export function AboutSection() {
           {/* Bottom image coordinates */}
           <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-between px-4 py-2 bg-foreground/80 backdrop-blur-sm">
             <span className="text-[10px] tracking-[0.2em] uppercase text-background/40 font-mono">
-              {"CAM: -45deg / ISO"}
+              {"FIBRE / FIELD VIEW"}
             </span>
             <span className="text-[10px] tracking-[0.2em] uppercase text-background/40 font-mono">
-              {"MODALITIES: VID+AUD+TEL"}
+              {"SIGNALS: STRAIN + VIBRATION + MOTION"}
             </span>
           </div>
         </motion.div>

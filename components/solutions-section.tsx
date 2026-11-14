@@ -46,7 +46,7 @@ const SOLUTIONS: Solution[] = [
     title: "Agentic Network Router",
     description:
       "Analyse network conditions, detect faults and support intelligent routing decisions with agentic orchestration for resilient connectivity.",
-    pattern: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoframe_14741-mAlnNPs8i1fRHm9zjrsf1DC9WD3dVv.png",
+    pattern: "/images/mpls-network-topology.webp",
     icon: <Fingerprint size={26} strokeWidth={1.25} />,
     cta: "Explore Network Intelligence",
   },
