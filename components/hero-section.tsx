@@ -100,7 +100,9 @@ export function HeroSection({ onDemo }: { onDemo: () => void }) {
           </motion.button>
 
           <motion.a
-            href="#about"
+            href="https://drive.google.com/file/d/1OYsqGhm0AlQDdgPpQRAdDgn2-jmEejJi/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             className="flex items-center gap-2 border border-foreground/30 px-4 py-3 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground hover:border-foreground transition-colors duration-200"

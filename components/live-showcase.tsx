@@ -26,7 +26,12 @@ export function LiveShowcase() {
           <h2 className="text-2xl font-extrabold uppercase tracking-tight lg:text-4xl">From camera feeds<br /><span className="text-[#ea580c]">to operational context.</span></h2>
           <p className="mt-4 max-w-xl text-xs leading-relaxed text-muted-foreground lg:text-sm">Explore eight surveillance use cases—from footfall and safety monitoring to parking availability, suspicious activity and forensic search.</p>
         </div>
-        <a href="/surveillance" className="self-start border border-foreground px-5 py-3 font-mono text-xs uppercase tracking-widest hover:bg-foreground hover:text-background">Explore surveillance →</a>
+        <div className="flex flex-wrap gap-3 self-start">
+          <a href="https://drive.google.com/file/d/1_FnXYiPe-J7ztu_hoh3Gpz58VQi73bbK/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="border border-foreground px-5 py-3 font-mono text-xs uppercase tracking-widest hover:bg-foreground hover:text-background">
+            Watch how it works →
+          </a>
+          <a href="/surveillance" className="border border-foreground px-5 py-3 font-mono text-xs uppercase tracking-widest hover:bg-foreground hover:text-background">Explore surveillance →</a>
+        </div>
       </div>
       <div className="grid grid-cols-1 gap-px border border-foreground bg-foreground sm:grid-cols-2 lg:grid-cols-4">
         {EXAMPLES.map((item, i) => (
