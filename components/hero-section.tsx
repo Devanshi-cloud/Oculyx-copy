@@ -30,7 +30,7 @@ export function HeroSection({ onDemo }: { onDemo: () => void }) {
           transition={{ duration: 0.7, ease }}
           className="font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight text-foreground mb-2 select-none uppercase"
         >
-          Predict. Protect.
+          Signals to Context
         </motion.h1>
 
         {/* Central signal-fusion diagram */}
@@ -50,7 +50,7 @@ export function HeroSection({ onDemo }: { onDemo: () => void }) {
           transition={{ duration: 0.7, delay: 0.25, ease }}
           className="font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight text-foreground mb-4 select-none uppercase"
         >
-          Verify.
+          Inference.
         </motion.h1>
 
         {/* Original-site headline */}
@@ -60,8 +60,8 @@ export function HeroSection({ onDemo }: { onDemo: () => void }) {
           transition={{ duration: 0.6, delay: 0.35, ease }}
           className="text-base sm:text-xl lg:text-2xl font-display font-bold tracking-tight uppercase text-foreground mb-4 text-balance max-w-2xl"
         >
-          The Shortest Path to
-          <span className="text-[#ea580c]"> Operational Truth</span>
+          From Signals to Context
+          <span className="text-[#ea580c]"> to Intelligence</span>
         </motion.h2>
 
         {/* Sub-headline */}
@@ -71,10 +71,7 @@ export function HeroSection({ onDemo }: { onDemo: () => void }) {
           transition={{ duration: 0.5, delay: 0.45, ease }}
           className="text-xs lg:text-sm text-muted-foreground max-w-xl mb-6 leading-relaxed font-mono"
         >
-          OCULYX is the multi-modal inference engine between raw signal and
-          operational truth. Video, audio, telemetry, and behavior fused into a
-          single verdict — structural integrity, threat probability, and
-          authenticity confidence, evaluated at the edge.
+          Oculyx is an AI-native real-world intelligence platform that transforms data from physical infrastructure, networks, sensors and surveillance systems into actionable intelligence. Through multimodal AI and agentic automation, Oculyx enables smarter monitoring, predictive insights, faster response and resilient infrastructure.
         </motion.p>
 
         {/* CTAs */}

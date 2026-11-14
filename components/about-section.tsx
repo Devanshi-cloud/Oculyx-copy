@@ -85,9 +85,9 @@ const STATS = [
 ]
 
 const QUESTIONS = [
-  "Is my infrastructure safe?",
-  "Is this event a real threat?",
-  "Is this person or media authentic?",
+  "Is my infrastructure healthy? DFOS Intelligence identifies structural change, strain, vibration and ground movement.",
+  "What is happening in my environment? Surveillance Intelligence analyses video, audio and events for situational awareness.",
+  "Can my network respond intelligently? Agentic Router Systems identify faults, optimize routes and coordinate operational response.",
 ]
 
 function StatBlock({ label, value, index }: { label: string; value: string; index: number }) {
@@ -152,8 +152,8 @@ export function AboutSection() {
           </div>
 
           <Image
-            src="/images/about-isometric.jpg"
-            alt="Isometric view of OCULYX inference infrastructure with sensor nodes and signal pipelines"
+            src="/images/fibre-infrastructure.png"
+            alt="Fibre-optic sensing cable monitoring terrain and a bridge for infrastructure intelligence"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -182,7 +182,7 @@ export function AboutSection() {
           {/* Header bar */}
           <div className="flex items-center justify-between px-5 py-3 border-b-2 border-foreground">
             <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
-              TRUTH_PROTOCOL.md
+              OCULYX_INTELLIGENCE.md
             </span>
             <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
               v4.0.1
@@ -199,9 +199,9 @@ export function AboutSection() {
                 transition={{ duration: 0.5, delay: 0.2, ease }}
                 className="text-2xl lg:text-3xl font-display font-extrabold tracking-tight uppercase text-balance"
               >
-                Reality is becoming
+                Infrastructure is changing.
                 <br />
-                <span className="text-[#ea580c]">harder to trust</span>
+                <span className="text-[#ea580c]">Visibility should too.</span>
               </motion.h2>
 
               <motion.div
@@ -212,14 +212,10 @@ export function AboutSection() {
                 className="flex flex-col gap-4"
               >
                 <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
-                  Critical infrastructure emits billions of sensor readings.
-                  Surveillance systems produce overwhelming hours of video.
-                  Synthetic media lets anyone impersonate a face, a voice, a
-                  signature at scale.
+                  Infrastructure constantly changes. Fibre-optic networks reveal structural strain, vibration and ground movement. Surveillance systems capture visual and acoustic activity across critical environments. Networks generate continuous telemetry, routing events and operational signals.
                 </p>
                 <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
-                  Every organization is stuck answering the same three
-                  questions:
+                  Yet these systems often operate in isolation, leaving fragmented visibility and delayed responses. Oculyx brings three intelligence layers together:
                 </p>
                 <ul className="flex flex-col border-2 border-foreground">
                   {QUESTIONS.map((q, i) => (
@@ -237,8 +233,7 @@ export function AboutSection() {
                   ))}
                 </ul>
                 <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
-                  OCULYX answers all three from one fused model — no separate
-                  stack for video, audio, and telemetry.
+                  One unified intelligence platform. Three interconnected capabilities. From physical sensing to intelligent operations. Oculyx connects what infrastructure feels, what surveillance sees, and what networks do.
                 </p>
               </motion.div>
 

@@ -20,7 +20,7 @@ const TABS: Tab[] = [
     id: "sense",
     label: "Sensing & Understanding",
     heading: "Sensing & Understanding",
-    body: "Collect data from sensors, cameras, audio streams, and operational systems, then apply computer vision, audio intelligence, time-series AI, and anomaly detection across every modality.",
+      body: "Collect signals from fibre-optic networks, sensors, cameras and operational systems, then analyse them in context with multimodal AI.",
     chips: ["Sense Signals", "Understand Context", "Temporal Baseline"],
     items: [
       {
@@ -67,8 +67,8 @@ const TABS: Tab[] = [
   {
     id: "infer",
     label: "Inference & Action",
-    heading: "Inference & Action",
-    body: "One fusion pass converts correlated signals into a verdict — threat probability, structural integrity, authenticity confidence — then routes it to the system that acts on it.",
+      heading: "Inference & Action",
+      body: "Multimodal inference connects infrastructure, surveillance, and network signals to operational context, then coordinates a clear, traceable response.",
     chips: ["Cross-Modal Fusion", "Verdict Routing", "Truth Reports"],
     items: [
       {
@@ -78,13 +78,13 @@ const TABS: Tab[] = [
       },
       {
         index: "02",
-        title: "Verify",
-        body: "Causal checks separate genuine correlation from coincident noise and confirm authenticity claims.",
+        title: "Understand",
+        body: "Correlate signals with asset, environmental, and operational context to establish what is happening.",
       },
       {
         index: "03",
         title: "Act",
-        body: "Verdicts trigger mitigation loops, quarantine shields, and signed truth reports — with full provenance.",
+        body: "Agentic automation routes actionable insights into operational workflows with traceable context and human oversight.",
       },
     ],
   },
@@ -156,7 +156,7 @@ export function CapabilityTabs() {
         <div className="lg:col-span-3 p-5 lg:p-6 flex flex-col gap-5 border-b-2 lg:border-b-0 lg:border-r-2 border-foreground">
           <div className="flex flex-col gap-2">
             <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-muted-foreground">
-              {`// HOW IT WORKS`}
+              {`// ${active.id === "infer" ? "INFERENCE & ACTION" : active.heading.toUpperCase()}`}
             </span>
             <h3 className="text-xl lg:text-2xl font-display font-extrabold uppercase tracking-tight">
               {active.heading}

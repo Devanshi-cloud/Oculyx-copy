@@ -3,21 +3,21 @@
 import { useEffect, useState } from "react"
 
 const LOG_LINES = [
-  "> mounting sensor bus: 52 sites",
-  "> video-04: 1284 frames decoded",
-  "> audio-12: stream aligned +3ms",
-  "> telemetry: 840k pts/s nominal",
-  "> fusion pass 1/3: normalize",
-  "> fusion pass 2/3: cross-modal",
-  "> fusion pass 3/3: reconcile",
-  "> deepfake scan: 0 synthetic hits",
-  "> anomaly cluster: zone-3 acoustic",
-  "> confidence score: 94.7%",
-  "> truth report #12007 written",
-  "> Status: OPERATIONAL",
-  "> Latency: 4.2ms p99",
-  "> Inferences: 500k / 24h",
-  "> --------- CYCLE COMPLETE ---------",
+  "> UNIFIED_INTELLIGENCE_BUS: ACTIVE",
+  "> fibre-optic sensors: distributed stream aligned",
+  "> surveillance: visual + acoustic context linked",
+  "> network telemetry: observations normalized",
+  "> context pass 1/3: signal conditioning",
+  "> context pass 2/3: cross-system correlation",
+  "> inference pass 3/3: anomaly assessment",
+  "> DFOS: structural change under review",
+  "> surveillance: event context updated",
+  "> agentic router: path analysis ready",
+  "> intelligence confidence: 94.7%",
+  "> OCULYX.CORE_STATUS: OPERATIONAL",
+  "> platform availability: 99.99%",
+  "> daily intelligence events: 500K+",
+  "> --------- INFERENCE COMPLETE ---------",
 ]
 
 export function TerminalCard() {

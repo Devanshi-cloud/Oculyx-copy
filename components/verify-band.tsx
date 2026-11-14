@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const ease = [0.22, 1, 0.36, 1] as const
 
-const WORDS = ["Predict", "Protect", "Verify"]
+const WORDS = ["Signals", "to", "Context"]
 
 export function VerifyBand() {
   return (

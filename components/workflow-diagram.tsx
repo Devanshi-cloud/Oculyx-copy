@@ -3,8 +3,8 @@
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
-const LEFT_LABELS = ["Video", "Audio", "Telemetry"]
-const RIGHT_LABELS = ["Threat", "Integrity", "Authenticity"]
+const LEFT_LABELS = ["DFOS", "Surveillance", "Networks"]
+const RIGHT_LABELS = ["Context", "Inference", "Action"]
 const PILL_W = 96
 const PILL_H = 26
 
@@ -73,7 +73,7 @@ export function WorkflowDiagram() {
         viewBox="0 0 800 200"
         className="w-full h-auto"
         role="img"
-        aria-label="Signal fusion diagram: video, audio, and telemetry inputs flow into the OCULYX inference core, which outputs threat, integrity, and authenticity verdicts"
+        aria-label="Unified intelligence flow: DFOS, surveillance, and network signals move through context and inference into operational action"
       >
         {/* Left lines from center to left labels */}
         {LEFT_LABELS.map((_, i) => {

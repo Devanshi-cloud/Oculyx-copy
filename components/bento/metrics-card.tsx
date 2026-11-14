@@ -71,9 +71,9 @@ export function MetricsCard() {
       </div>
       <div className="flex-1 flex flex-col justify-center gap-6 p-6">
         <ScrambleNumber target="94.7%" label="Inference Confidence" delay={500} />
-        <ScrambleNumber target="840K" label="Data Points / sec" delay={800} />
-        <ScrambleNumber target="99.99%" label="System Uptime" delay={1100} />
-        <ScrambleNumber target="500K+" label="Daily Inferences" delay={1400} />
+        <ScrambleNumber target="840K" label="Sensor Observations / sec" delay={800} />
+        <ScrambleNumber target="99.99%" label="Platform Availability" delay={1100} />
+        <ScrambleNumber target="500K+" label="Daily Intelligence Events" delay={1400} />
       </div>
     </div>
   )

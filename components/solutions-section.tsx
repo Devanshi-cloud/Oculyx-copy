@@ -18,40 +18,37 @@ interface Solution {
 
 const SOLUTIONS: Solution[] = [
   {
-    id: "structure",
+    id: "dfos",
     index: "_01",
-    name: "OCULYX SOLUTION",
-    title: "Critical Infrastructure Intelligence",
+    name: "OCULYX INTELLIGENCE LAYER",
+    title: "Distributed Fibre-Optic Sensing",
     description:
-      "Reactive inspections find damage after it happens. Continuous multi-modal monitoring of bridges, plants, and grids predicts structural failure while it is still a signal, not a collapse.",
-    pattern:
-      "repeating-linear-gradient(45deg, hsl(var(--foreground) / 0.14) 0 2px, transparent 2px 10px)",
+      "Turn fibre networks into continuous sensing systems. Interpret distributed acoustic, temperature and strain signals to monitor assets and surface meaningful change.",
+    pattern: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/932f0540-e830-465c-ba80-42dab14dae45-0qjNtLtSp9V8XrWOWasW4nxvxR69uk.png",
     icon: <Building2 size={26} strokeWidth={1.25} />,
-    cta: "Explore Structure",
+    cta: "Explore DFOS",
   },
   {
-    id: "watch",
+    id: "surveillance",
     index: "_02",
-    name: "OCULYX SOLUTION",
-    title: "Surveillance Intelligence Lab",
+    name: "OCULYX INTELLIGENCE LAYER",
+    title: "Surveillance Intelligence",
     description:
-      "No team can watch thousands of cameras. OCULYX detects, prioritizes, and summarizes the events that matter — behavior analytics across every feed, with nothing missed in the queue.",
-    pattern:
-      "radial-gradient(hsl(var(--foreground) / 0.22) 1px, transparent 1px)",
+      "Connect video, audio and operational context to spot relevant events, monitor spaces and investigate faster—from footfall to safety and suspicious activity.",
+    pattern: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/13ad6363-bed1-4722-88b2-884ef8dd919c-HBeLUDikf7DB3JnX43tESZgs51YIDe.png",
     icon: <Eye size={26} strokeWidth={1.25} />,
-    cta: "Explore Watch",
+    cta: "Explore Surveillance",
   },
   {
-    id: "verify",
+    id: "network-intelligence",
     index: "_03",
-    name: "OCULYX SOLUTION",
-    title: "Reality Trust Center",
+    name: "OCULYX INTELLIGENCE LAYER",
+    title: "Agentic Network Router",
     description:
-      "Synthetic identities, cloned voices, and manipulated media bypass legacy verification. OCULYX scores authenticity across video, audio, behavior, and context in a single pass.",
-    pattern:
-      "repeating-linear-gradient(0deg, hsl(var(--foreground) / 0.16) 0 1px, transparent 1px 8px)",
+      "Analyse network conditions, detect faults and support intelligent routing decisions with agentic orchestration for resilient connectivity.",
+    pattern: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoframe_14741-mAlnNPs8i1fRHm9zjrsf1DC9WD3dVv.png",
     icon: <Fingerprint size={26} strokeWidth={1.25} />,
-    cta: "Explore Verify",
+    cta: "Explore Network Intelligence",
   },
 ]
 
@@ -67,7 +64,7 @@ function SolutionCard({ solution, index }: { solution: Solution; index: number }
       {/* Pattern header */}
       <div
         className="relative flex items-center justify-center h-36 border-b-2 border-foreground overflow-hidden"
-        style={{ backgroundImage: solution.pattern, backgroundSize: "12px 12px" }}
+        style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.68)), url("${solution.pattern}")`, backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <div className="flex items-center justify-center w-14 h-14 border-2 border-foreground bg-background text-[#ea580c]">
           {solution.icon}
@@ -95,7 +92,7 @@ function SolutionCard({ solution, index }: { solution: Solution; index: number }
           {solution.description}
         </p>
         <a
-          href="#"
+          href={`/${solution.id}`}
           className="group flex items-center justify-between gap-3 border-t-2 border-foreground pt-4 text-xs font-mono tracking-widest uppercase text-foreground hover:text-[#ea580c] transition-colors duration-200"
         >
           {solution.cta}
@@ -147,14 +144,12 @@ export function SolutionsSection() {
             One inference engine.
           </h2>
           <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed max-w-xl">
-            Structure, Watch, and Verify share the same fusion core — so a
-            structural anomaly, a behavioral event, and a spoofed identity are
-            scored against one common model of reality.
+            DFOS, Surveillance Intelligence, and Agentic Network Routing connect distributed signals, network activity, and real-world events into contextual intelligence and coordinated action.
           </p>
         </div>
-        <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-muted-foreground whitespace-nowrap">
-          {"[ three deployment surfaces ]"}
-        </span>
+        <a href="/dfos-exdts-multi-zone-water-injection-monitoring" className="text-[10px] font-mono tracking-[0.15em] uppercase text-[#ea580c] hover:text-foreground">
+          Read DFOS water-injection case study →
+        </a>
       </motion.div>
 
       {/* Solutions grid */}

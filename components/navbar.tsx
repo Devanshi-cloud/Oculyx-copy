@@ -1,7 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Aperture, Menu, X } from "lucide-react"
+import Image from "next/image"
+import { Menu, X } from "lucide-react"
 import { AnimatePresence, motion } from "framer-motion"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -10,7 +11,7 @@ const ease = [0.22, 1, 0.36, 1] as const
 const LINKS = [
   { label: "Platform", href: "#platform" },
   { label: "Solutions", href: "#solutions" },
-  { label: "Research", href: "#research" },
+  { label: "Research", href: "/dfos-exdts-multi-zone-water-injection-monitoring" },
   { label: "Company", href: "#company" },
 ]
 
@@ -20,9 +21,9 @@ export function Navbar({ onDemo }: { onDemo: () => void }) {
 
   /* scroll-spy: highlight the section currently in view */
   useEffect(() => {
-    const targets = LINKS.map((l) => document.querySelector(l.href)).filter(
-      (el): el is Element => Boolean(el)
-    )
+    const targets = LINKS.filter((link) => link.href.startsWith("#"))
+      .map((link) => document.querySelector(link.href))
+      .filter((el): el is Element => Boolean(el))
     if (targets.length === 0) return
 
     const observer = new IntersectionObserver(
@@ -61,12 +62,12 @@ export function Navbar({ onDemo }: { onDemo: () => void }) {
             }}
             className="flex items-center gap-2.5 shrink-0"
           >
-            <Aperture size={16} strokeWidth={1.5} className="text-[#ea580c]" />
+            <Image src="/images/oculyx-mark.png" alt="Oculyx" width={38} height={32} className="h-8 w-auto object-contain" style={{ width: "auto" }} priority />
             <span className="text-xs font-display tracking-[0.2em] uppercase font-bold">
               OCULYX
             </span>
             <span className="hidden sm:inline text-[9px] font-mono tracking-[0.15em] uppercase text-muted-foreground border-l border-border pl-2.5">
-              {"PREDICT. PROTECT. VERIFY."}
+              {"SIGNAL → CONTEXT → INFERENCE"}
             </span>
           </a>
 
@@ -80,6 +81,7 @@ export function Navbar({ onDemo }: { onDemo: () => void }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.06, duration: 0.4, ease }}
                 onClick={(e) => {
+                  if (link.href.startsWith("/")) return
                   e.preventDefault()
                   go(link.href)
                 }}
@@ -154,6 +156,7 @@ export function Navbar({ onDemo }: { onDemo: () => void }) {
                     key={link.label}
                     href={link.href}
                     onClick={(e) => {
+                      if (link.href.startsWith("/")) return
                       e.preventDefault()
                       go(link.href)
                     }}

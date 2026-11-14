@@ -6,19 +6,19 @@ import { motion } from "framer-motion"
 const ease = [0.22, 1, 0.36, 1] as const
 
 const ALERTS = [
-  { text: "Acoustic anomaly detected — Facility E, Zone 3", time: "09:41" },
-  { text: "Cross-modal risk confirmed — Site B", time: "09:12" },
-  { text: "All signals nominal — Asset A", time: "08:55" },
+  { text: "DFOS — Acoustic disturbance detected along monitored fibre corridor", time: "09:41" },
+  { text: "SURVEILLANCE — Suspicious activity identified through video analytics", time: "09:12" },
+  { text: "AGENTIC ROUTER — Network congestion detected; routing optimization initiated", time: "08:55" },
 ]
 
 const STATS = [
-  { value: "2,500+", label: "Signals Ingested" },
-  { value: "840K", label: "Data Points / s" },
-  { value: "1.2M", label: "Inferences Today" },
-  { value: "99.99%", label: "System Uptime" },
+  { value: "94.7%", label: "Intelligence Confidence" },
+  { value: "840K", label: "Sensor Observations / sec" },
+  { value: "99.99%", label: "Platform Availability" },
+  { value: "500K+", label: "Daily Intelligence Events" },
 ]
 
-const PIPELINE = ["SIGNAL", "CONTEXT", "INFERENCE", "TRUTH"]
+const PIPELINE = ["SENSE", "DETECT", "UNDERSTAND", "ORCHESTRATE", "ACT"]
 
 /* ── animated confidence score ── */
 function ConfidenceScore() {
@@ -180,11 +180,7 @@ export function CommandCenter() {
             <span className="text-[#ea580c]">Toward understanding.</span>
           </h2>
           <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed">
-            Most systems score a single signal. OCULYX fuses video, audio,
-            sensor telemetry, behavioral patterns, environmental context, and
-            historical baselines — then returns structural integrity, threat
-            probability, authenticity confidence, and predictive risk as one
-            explainable verdict.
+            Most systems score a single signal.               From distributed fibre-optic sensing to real-time surveillance intelligence and autonomous network orchestration, OCULYX transforms fragmented signals into contextual intelligence and coordinated action. It detects structural anomalies, identifies emerging threats, and intelligently routes network operations across critical infrastructure.
           </p>
         </div>
 
@@ -231,7 +227,7 @@ export function CommandCenter() {
           <div className="border-b-2 lg:border-b-0 lg:border-r-2 border-background/20 p-4">
             <div className="flex items-center justify-between mb-3">
               <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-background/60">
-                Signal Ingestion Map
+                Unified Intelligence Overview
               </span>
               <span className="text-[10px] font-mono text-background/40">52 SITES</span>
             </div>
