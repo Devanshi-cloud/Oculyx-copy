@@ -1,6 +1,7 @@
 "use client"
 
-import { Aperture, Github, Linkedin, Youtube } from "lucide-react"
+import Image from "next/image"
+import { Github, Linkedin, Youtube } from "lucide-react"
 import { motion } from "framer-motion"
 
 const ease = [0.22, 1, 0.36, 1] as const
@@ -18,11 +19,11 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Insights",
     links: [
-      { label: "Case Simulations", href: "#research" },
-      { label: "Research & Innovation", href: "#research" },
-      { label: "Industries We Serve", href: "#research" },
+      { label: "DFOS Water Injection Case Study", href: "/blogs/dfos/multi-zone-water-injection-monitoring" },
+      { label: "Agentic Network Research", href: "/blogs/agentic-router-network/what-if-your-network-could-fix-itself" },
+      { label: "Industries We Serve", href: "#solutions" },
       { label: "AI Trust Index™", href: "#capabilities" },
-      { label: "Blogs", href: "#research" },
+      { label: "Network Operations Blogs", href: "/blogs/agentic-router-network" }
     ],
   },
   {
@@ -75,10 +76,7 @@ export function Footer({ onDemo }: { onDemo: () => void }) {
       {/* Quote */}
       <div className="border-2 border-foreground px-5 py-6 lg:px-8 lg:py-8 mb-12">
         <p className="text-lg lg:text-2xl font-display font-bold tracking-tight uppercase leading-snug text-balance max-w-4xl">
-          {"“The future's greatest challenge is not the lack of data. It is the ability to determine what is true.”"}
-        </p>
-        <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-muted-foreground mt-4">
-          — OCULYX FIELD NOTES / MULTI-MODAL INFERENCE ENGINE
+          {"“If 5G is the neural conduction of the digital age and AI the super brain, fiber sensing serves as the quietly growing peripheral nerves.”"}
         </p>
       </div>
 
@@ -87,18 +85,16 @@ export function Footer({ onDemo }: { onDemo: () => void }) {
         {/* Brand */}
         <div className="flex flex-col gap-4 lg:w-72 shrink-0">
           <div className="flex items-center gap-2.5">
-            <Aperture size={16} strokeWidth={1.5} className="text-[#ea580c]" />
+            <Image src="/images/oculyx-mark.png" alt="Oculyx" width={34} height={28} className="h-7 w-auto object-contain" style={{ width: "auto" }} />
             <span className="text-xs font-display tracking-[0.2em] uppercase font-bold">
               OCULYX
             </span>
           </div>
           <p className="text-xs font-mono text-muted-foreground leading-relaxed">
-            Multiple weak signals individually mean little. Combined intelligently, they reveal
-            operational truth — that is the core of OCULYX.
+            Oculyx transforms signals from physical infrastructure, networks, sensors and surveillance into actionable intelligence.
           </p>
           <p className="text-xs font-mono text-muted-foreground leading-relaxed">
-            We build the real-world inference engine that converts fragmented signals into
-            operational truth across infrastructure, authenticity, and industrial systems.
+            Multimodal AI and agentic automation enable smarter monitoring, predictive insights, faster response and resilient infrastructure.
           </p>
           <div className="flex items-center gap-3 pt-1">
             {[
@@ -134,6 +130,7 @@ export function Footer({ onDemo }: { onDemo: () => void }) {
                     <a
                       href={link.href}
                       onClick={(e) => {
+                        if (link.href.startsWith("/")) return
                         e.preventDefault()
                         scrollTo(link.href, onDemo)
                       }}

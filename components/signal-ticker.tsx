@@ -10,12 +10,12 @@ const TOKENS = [
   "CONTEXT",
   "->",
   "INFERENCE",
-  "->",
-  "TRUTH",
   "//",
-  "PREDICT",
-  "PROTECT",
-  "VERIFY",
+  "SURVEILLANCE",
+  "MONITOR",
+  "SENSOR",
+  "FIBRE INTELLIGENCE",
+  "FIBRE OPTIC",
   "//",
 ]
 

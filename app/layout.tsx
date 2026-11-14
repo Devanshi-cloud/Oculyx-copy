@@ -17,23 +17,22 @@ const martianMono = Martian_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'OCULYX | Multi-Modal Inference Engine — Predict. Protect. Verify.',
+  title: 'OCULYX | AI-Native Real-World Intelligence Platform',
   description:
-    'OCULYX is the multi-modal inference engine that fuses video, audio, sensor telemetry, and behavioral signals into operational truth — structural integrity, threat probability, and authenticity confidence in real time.',
+    'Oculyx transforms data from physical infrastructure, networks, sensors and surveillance into actionable intelligence through multimodal AI and agentic automation.',
   keywords: [
-    'multi-modal inference',
-    'AI inference engine',
-    'deepfake detection',
-    'synthetic media verification',
+    'real-world intelligence',
+    'multimodal AI',
+    'DFOS',
+    'distributed fibre optic sensing',
+    'fibre optic intelligence',
     'surveillance intelligence',
-    'structural health monitoring',
+    'infrastructure monitoring',
+    'agentic network routing',
+    'sensor analytics',
     'anomaly detection',
-    'threat detection AI',
-    'signal fusion',
-    'telemetry analytics',
-    'critical infrastructure intelligence',
-    'reality trust',
-    'edge inference',
+    'network intelligence',
+    'critical infrastructure',
     'OCULYX',
   ],
   authors: [{ name: 'OCULYX' }],
@@ -53,23 +52,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'OCULYX | Multi-Modal Inference Engine',
+    title: 'OCULYX | Real-World Intelligence Platform',
     description:
-      'Fused video, audio, telemetry, and behavioral signals turned into operational truth. Predict. Protect. Verify.',
+      'From distributed fibre-optic sensing to surveillance intelligence and agentic network orchestration.',
     siteName: 'OCULYX',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OCULYX | Multi-Modal Inference Engine',
+    title: 'OCULYX | AI-Native Real-World Intelligence Platform',
     description:
-      'The shortest path between fragmented real-world signals and operational truth.',
+      'Signals to context to intelligence—multimodal monitoring for resilient infrastructure.',
     creator: '@oculyx',
   },
   category: 'technology',
 }
 
 export const viewport: Viewport = {
-  themeColor: '#F2F1EA',
+  themeColor: '#0F0F0F',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -87,7 +86,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-mono antialiased">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>

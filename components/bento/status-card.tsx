@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react"
 
 const REGIONS = [
-  { name: "ASSET-A / BRIDGE", status: "ONLINE", latency: "3.8ms" },
-  { name: "SITE-B / SUBSTATION", status: "ONLINE", latency: "4.1ms" },
-  { name: "HUB-C / TERMINAL", status: "ONLINE", latency: "4.6ms" },
-  { name: "MINE-D / SHAFT-04", status: "ONLINE", latency: "4.2ms" },
+  { name: "BRIDGE-A / STRUCTURAL", status: "ONLINE", latency: "3.8 ms" },
+  { name: "SUBSTATION-B / GRID", status: "ONLINE", latency: "4.1 ms" },
+  { name: "TERMINAL-C / SURVEILLANCE", status: "ONLINE", latency: "4.6 ms" },
+  { name: "SHAFT-D / DFOS", status: "ONLINE", latency: "4.2 ms" },
 ]
 
 export function StatusCard() {

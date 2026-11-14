@@ -12,7 +12,6 @@ import { LiveShowcase } from "@/components/live-showcase"
 import { VerifyBand } from "@/components/verify-band"
 import { CommandCenter } from "@/components/command-center"
 import { SystemFocus } from "@/components/system-focus"
-import { MediaMarquee } from "@/components/media-marquee"
 import { GlitchMarquee } from "@/components/glitch-marquee"
 import { Footer } from "@/components/footer"
 import { ChatWidget } from "@/components/chat-widget"
@@ -37,7 +36,6 @@ export default function Page() {
         <VerifyBand />
         <CommandCenter />
         <SystemFocus />
-        <MediaMarquee />
         <GlitchMarquee />
       </main>
       <Footer onDemo={openDemo} />

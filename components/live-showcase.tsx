@@ -2,140 +2,52 @@
 
 import { motion } from "framer-motion"
 
-const ease = [0.22, 1, 0.36, 1] as const
-
-const FEEDS = [
-  { id: "CAM-01", label: "ASSET-A / BRIDGE DECK", variant: 0 },
-  { id: "CAM-02", label: "SITE-B / SUBSTATION", variant: 1 },
-  { id: "CAM-03", label: "HUB-C / LOADING BAY", variant: 2 },
-  { id: "CAM-04", label: "MINE-D / SHAFT-04", variant: 3 },
-  { id: "CAM-05", label: "FACILITY-E / ZONE 3", variant: 1 },
-  { id: "CAM-06", label: "GRID-N / SWITCHYARD", variant: 2 },
-  { id: "CAM-07", label: "PIPE-7 / VALVE STATION", variant: 3 },
-  { id: "CAM-08", label: "PERIM-2 / NORTH GATE", variant: 0 },
+const EXAMPLES = [
+  { title: "Footfall & occupancy", label: "CROWD MONITORING / LIVE", image: "/images/crowd-footfall.png", alt: "Crowd-monitoring dashboard displaying live footfall and zone-occupancy activity" },
+  { title: "Safety & PPE events", label: "PPE MONITORING / EVENT", image: "/images/ppe-detection.jpeg", alt: "Workplace surveillance image with visual markers identifying missing protective gloves" },
+  { title: "Vehicle & parking detection", label: "PARKING INTELLIGENCE / LIVE", image: "/images/parking-detection.png", alt: "Parking-lot camera view with detected vehicles and tracked parking spaces" },
+  { title: "Theft & suspicious activity", label: "BEHAVIOUR ANALYSIS / REVIEW", image: "/images/theft-monitoring.webp", alt: "Surveillance analytics view highlighting a suspected pickpocketing event" },
+  { title: "Face detection", label: "IDENTITY SIGNAL / REVIEW", image: "/images/face-detection.png", alt: "Face-detection interface showing facial landmarks and confidence information" },
+  { title: "Vacant-space detection", label: "SPACE MONITORING / LIVE", image: "/images/empty-space-monitoring.png", alt: "Aerial view marking vacant spaces and high-activity areas" },
+  { title: "Service & workflow monitoring", label: "ACTIVITY ANALYTICS / LIVE", image: "/images/service-analytics.png", alt: "Restaurant service analytics dashboard with staff movement and activity metrics" },
+  { title: "Forensic person search", label: "VIDEO INVESTIGATION / SEARCH", image: "/images/person-search.png", alt: "Forensic video search interface showing people matching a visual query" },
 ]
-
-const PATTERNS = [
-  "repeating-linear-gradient(0deg, rgba(234,88,12,0.18) 0 2px, transparent 2px 6px)",
-  "radial-gradient(rgba(234,88,12,0.35) 1px, transparent 1px)",
-  "repeating-linear-gradient(45deg, rgba(234,88,12,0.16) 0 3px, transparent 3px 9px)",
-  "repeating-linear-gradient(90deg, rgba(234,88,12,0.22) 0 1px, transparent 1px 10px)",
-]
-
-function cellClass(index: number) {
-  const base = "relative flex flex-col bg-background"
-  const bottom =
-    index < 6 ? "border-b-2" : index === 6 ? "border-b-2 lg:border-b-0" : "border-b-0"
-  const rightSm = index % 2 === 0 ? "sm:border-r-2" : ""
-  const rightLg = index === 1 || index === 5 ? "lg:border-r-2" : ""
-  return `${base} ${bottom} ${rightSm} ${rightLg} border-foreground`
-}
-
-function FeedTile({ feed, index }: { feed: (typeof FEEDS)[number]; index: number }) {
-  return (
-    <motion.article
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ delay: (index % 4) * 0.08, duration: 0.5, ease }}
-      className={cellClass(index)}
-    >
-      {/* header */}
-      <div className="flex items-center justify-between px-3 py-2 border-b border-border">
-        <span className="flex items-center gap-2">
-          <span className="h-1.5 w-1.5 bg-[#ea580c] animate-blink" />
-          <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-foreground">
-            {feed.id}
-          </span>
-        </span>
-        <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-[#ea580c]">
-          LIVE
-        </span>
-      </div>
-
-      {/* feed surface */}
-      <div
-        className="relative h-32 overflow-hidden bg-foreground group-hover:transition-transform duration-300"
-        style={{ backgroundImage: PATTERNS[feed.variant], backgroundSize: "12px 12px" }}
-      >
-        {/* scanning sweep */}
-        <motion.span
-          className="absolute inset-x-0 h-8 bg-[#ea580c]/25"
-          initial={{ top: -32 }}
-          animate={{ top: 160 }}
-          transition={{ duration: 2.6, repeat: Infinity, ease: "linear", delay: index * 0.32 }}
-        />
-        {/* crosshair */}
-        <span className="absolute inset-0 flex items-center justify-center">
-          <span className="block w-8 h-8 border border-background/50" />
-        </span>
-        <span className="absolute bottom-1.5 right-2 text-[9px] font-mono text-background/70">
-          1920x1080
-        </span>
-      </div>
-
-      {/* footer */}
-      <div className="flex items-center justify-between px-3 py-2 border-t border-border">
-        <span className="text-[10px] font-mono uppercase text-muted-foreground truncate">
-          {feed.label}
-        </span>
-        <span className="text-[10px] font-mono text-muted-foreground" style={{ fontVariantNumeric: "tabular-nums" }}>
-          {String(9 + (index % 3)).padStart(2, "0")}:
-          {String((index * 7) % 60).padStart(2, "0")}
-        </span>
-      </div>
-    </motion.article>
-  )
-}
 
 export function LiveShowcase() {
   return (
     <section id="live" className="w-full px-6 py-20 lg:px-12">
-      {/* Section label */}
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5, ease }}
-        className="flex items-center gap-4 mb-8"
-      >
-        <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
-          {"// SECTION: REAL_TIME_OPERATIONS"}
-        </span>
+      <div className="mb-8 flex items-center gap-4">
+        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">{"// SURVEILLANCE INTELLIGENCE"}</span>
         <div className="flex-1 border-t border-border" />
-        <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-mono">
-          007
-        </span>
-      </motion.div>
-
-      {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.6, ease }}
-        className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10"
-      >
-        <div className="flex flex-col gap-3">
-          <h2 className="text-2xl lg:text-4xl font-display font-extrabold tracking-tight uppercase text-balance">
-            3D Showcase of
-            <br />
-            <span className="text-[#ea580c]">Live Systems</span>
-          </h2>
-          <p className="text-xs lg:text-sm font-mono text-muted-foreground leading-relaxed max-w-xl">
-            Eight instrumented feeds rendered live from the fusion core — every frame scored
-            for threat, integrity, and authenticity as it arrives.
-          </p>
+        <span className="font-mono text-[10px] text-muted-foreground">007</span>
+      </div>
+      <div className="mb-10 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <div className="max-w-2xl">
+          <h2 className="text-2xl font-extrabold uppercase tracking-tight lg:text-4xl">From camera feeds<br /><span className="text-[#ea580c]">to operational context.</span></h2>
+          <p className="mt-4 max-w-xl text-xs leading-relaxed text-muted-foreground lg:text-sm">Explore eight surveillance use cases—from footfall and safety monitoring to parking availability, suspicious activity and forensic search.</p>
         </div>
-        <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-muted-foreground whitespace-nowrap">
-          {"[ 8 feeds // 4.2ms p99 ]"}
-        </span>
-      </motion.div>
-
-      {/* Feed grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-2 border-foreground">
-        {FEEDS.map((feed, i) => (
-          <FeedTile key={feed.id} feed={feed} index={i} />
+        <div className="flex flex-wrap gap-3 self-start">
+          <a href="https://drive.google.com/file/d/1_FnXYiPe-J7ztu_hoh3Gpz58VQi73bbK/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="border border-foreground px-5 py-3 font-mono text-xs uppercase tracking-widest hover:bg-foreground hover:text-background">
+            Watch how it works →
+          </a>
+          <a href="/surveillance" className="border border-foreground px-5 py-3 font-mono text-xs uppercase tracking-widest hover:bg-foreground hover:text-background">Explore surveillance →</a>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 gap-px border border-foreground bg-foreground sm:grid-cols-2 lg:grid-cols-4">
+        {EXAMPLES.map((item, i) => (
+          <motion.article key={item.title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: (i % 4) * 0.08 }} className="bg-background">
+            <div className="flex items-center justify-between border-b border-border px-3 py-2">
+              <span className="font-mono text-[9px] tracking-widest text-muted-foreground">{item.label}</span>
+              <span className="size-1.5 bg-[#ea580c]" />
+            </div>
+            <div className="aspect-[4/3] overflow-hidden bg-foreground/5">
+              <img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]" />
+            </div>
+            <div className="px-4 py-4">
+              <h3 className="font-display text-sm font-bold uppercase">{item.title}</h3>
+              <p className="mt-2 font-mono text-[10px] leading-relaxed text-muted-foreground">Detection, context and event prioritization for a faster operational response.</p>
+            </div>
+          </motion.article>
         ))}
       </div>
     </section>
